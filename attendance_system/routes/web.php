@@ -15,3 +15,11 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+Route::get('/about-us', function () {
+    return view('aboutus');
+})->name('about'); // This creates the name 'about'
+
+// This is correct
+Route::get('/contact-us', function () {
+    return view('contactus');
+})->name('contact');
