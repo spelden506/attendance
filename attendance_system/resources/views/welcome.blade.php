@@ -64,9 +64,8 @@
             @if (Route::has('login'))
                 <ul class="hidden md:flex space-x-6 text-sm font-medium items-center">
                     <li><a href="{{ url('/') }}" class="text-blue-700 font-bold transition">Dashboard</a></li>
-                    <li><a href="{{ route('about') }}" class="hover:text-blue-500 transition">About Us</a></li>
-                    <li><a href="{{ route('contact') }}" class="hover:text-blue-500 transition">Contact Us</a></li>
-                                    
+            
+                                      
                     @auth
                         <!-- If user is logged in -->
                         <li>
@@ -80,7 +79,7 @@
                             <a href="{{ route('login') }}" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition">
                                 Login
                             </a>
-                        </li>
+                        </li>   
 
                         @if (Route::has('register'))
                             <!-- You can uncomment this if you have a registration page -->
