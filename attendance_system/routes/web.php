@@ -23,3 +23,9 @@ Route::get('/about-us', function () {
 Route::get('/contact-us', function () {
     return view('contactus');
 })->name('contact');
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', function () {
+        // We will create this view in the next step
+        return view('profile.edit'); 
+    })->name('profile.edit'); // This .name() is the crucial part
+});
