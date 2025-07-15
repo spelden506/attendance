@@ -81,17 +81,6 @@
                                 Login
                             </a>
                         </li>
-
-                        @if (Route::has('register'))
-                            <!-- You can uncomment this if you have a registration page -->
-                            <!--
-                            <li>
-                                <a href="{{ route('register') }}" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded transition">
-                                    Register
-                                </a>
-                            </li>
-                            -->
-                        @endif
                     @endauth
                 </ul>
             @endif
@@ -158,7 +147,8 @@
                         let dy = circles[i].y - circles[j].y;
                         let dist = Math.sqrt(dx * dx + dy * dy);
                         if (dist < 100) {
-                            // Fixed: Used template literal for dynamic RGBA string
+                            // THIS IS THE CORRECTED LINE:
+                            // We wrap the color value in backticks (`) to create a template literal string.
                             ctx.strokeStyle = `rgba(0, 100, 255, ${1 - dist / 100})`;
                             ctx.lineWidth = 0.5;
                             ctx.beginPath();
