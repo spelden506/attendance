@@ -29,3 +29,13 @@ Route::middleware('auth')->group(function () {
         return view('profile.edit'); 
     })->name('profile.edit'); // This .name() is the crucial part
 });
+Route::get('/attendance', function () {
+        return view('attendance');
+    })->name('attendance');
+Route::get('/employees', function () {
+        return view('employees');
+    })->name('employees');
+
+    Route::get('/reports', function () {
+        return view('reports');
+    })->name('reports');

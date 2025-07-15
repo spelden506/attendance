@@ -8,4 +8,17 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+
+    plugins: [
+        laravel({
+            input: [
+                'resources/css/app.css',
+                'resources/css/dashboard.css', // <-- ADD THIS LINE
+                'resources/js/app.js',
+                'resources/js/dashboard.js',   // <-- ADD THIS LINE
+            ],
+            refresh: true,
+        }),
+    ],
 });
+
